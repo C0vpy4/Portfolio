@@ -4,10 +4,7 @@ import "./sidebar.scss"
 import ToggleButton from "./toggleButton/ToggleButton"
 import { m, motion } from "framer-motion"
 
-const Sidebar = () =>{
-    const [open, setOpen] = useState(false)
-
-    const variants = {
+const variants = {
         open:{
             clipPath: "circle(1200px at 50px 50px)",
             transition: {
@@ -25,6 +22,11 @@ const Sidebar = () =>{
             }
         } 
     }
+    
+const Sidebar = () =>{
+    const [open, setOpen] = useState(false)
+
+    
     return(
         <motion.div className="sidebar" animate={open ? "open":"closed"}>
             <motion.div className="bg" variants={variants}>
